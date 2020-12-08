@@ -1,0 +1,21 @@
+name: Test
+on:
+  push:
+    branches: [main]
+
+
+jobs:
+  test:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: ngupuk/action-plantuml@main
+        with:
+          cmd: |
+            rm -rf $PWD/out
+            plantuml src/*.pu src/**/*.pu -o $PWD/out
+
+      - uses: actions/upload-artifact@v2
+        name: Upload Artifact
+        with:
+          name: diagrams
+          path: out

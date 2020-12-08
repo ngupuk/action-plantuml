@@ -1,0 +1,11 @@
+@startuml deployment
+title Deloy to Server
+autonumber
+Developer -> Github: Push to Master
+Github -> OnlineServer: SSH: Update Repository 
+OnlineServer -> Github: Pull Master
+Github -> OnlineServer: Repository Data
+OnlineServer -> OnlineServer: Build
+OnlineServer -> Github: Process Done
+Github -> Developer: Github Action Done
+@enduml

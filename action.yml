@@ -1,0 +1,12 @@
+name: 'Action-PlantUML'
+description: 'Simple PlantUML Container'
+inputs:
+  cmd:
+    description: 'Command To Run'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.cmd }}
