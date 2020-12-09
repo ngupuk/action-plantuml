@@ -2,6 +2,7 @@
 cd /github/workspace
 echo "Running..."
 ls
-$1
+plantuml $1
 ls
+ls src
 echo "Done!"
