@@ -12,7 +12,7 @@ jobs:
       - uses: ngupuk/action-plantuml@main
         with:
           cmd: plantuml src/*.pu -o $PWD/out
-
+      - run: ls
       - uses: actions/upload-artifact@v2
         name: Upload Artifact
         with:
