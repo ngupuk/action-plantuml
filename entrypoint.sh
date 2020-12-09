@@ -1,8 +1,5 @@
 #!/bin/sh -l
 cd /github/workspace
 echo "Running..."
-ls
-plantuml $1
-ls
-ls src
+$1
 echo "Done!"
